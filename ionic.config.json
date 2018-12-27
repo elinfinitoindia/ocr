@@ -1,5 +1,5 @@
 {
-  "name": "LocationTracker",
+  "name": "PoC:OCR App",
   "integrations": {
     "cordova": {}
   },

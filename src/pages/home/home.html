@@ -1,14 +1,74 @@
 <ion-header>
-  <ion-navbar>
+  <ion-navbar color="primary">
     <ion-title>
-      Ionic Blank
+      PoC: OCR App
     </ion-title>
   </ion-navbar>
 </ion-header>
-
+ 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
-</ion-content>
+  <ion-row>
+    <ion-col>
+      <img src="assets/logo.jpeg" alt="">
+    </ion-col>
+  </ion-row>
+    <!-- <button ion-button block round color="dark" style="text-transform: none;height: 4rem;" (tap)="viewNotes();" >
+        <ion-icon md="ios-paper" style="color:white;margin-right:2rem" ></ion-icon>
+        View Notes</button> -->
+    <button ion-button block round color="secondary" style="text-transform: none;height: 4rem;" (tap)="chooseImage();" >
+      <ion-icon md="ios-images" style="color:white;margin-right:2rem" ></ion-icon>
+      Read Aadhar 
+    </button>
+    <button ion-button block round color="primary" (tap)="recog();" style="margin-bottom: 2rem;text-transform: none;height: 4rem;margin-top:1rem;"  [disabled]="true" >
+        <ion-icon md="ios-barcode" style="color:white;margin-right: 2rem;" ></ion-icon>
+      Read Pan</button>
+      <!-- <ion-row  *ngIf="imageText">
+            <button ion-button (tap)="speak();">
+                <ion-icon md="ios-mic" style="margin-right:1rem"></ion-icon> Speak
+            </button>
+      </ion-row> -->
+      
+    <!-- <img [src]="selectedImage" *ngIf="selectedImage"> -->
+    <ion-card text-center *ngIf="imageText">
+      <ion-card-header>
+        Text Result
+      </ion-card-header>
+      <ion-card-content> {{imageText}} </ion-card-content>
+    </ion-card>
+
+    <ion-row>
+        <ion-col col-12>
+      <ion-row>
+        <ion-col col-4>
+            <span>Name</span>
+        </ion-col>
+        <ion-col >
+          <ion-item>
+          
+            <ion-input type="" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+          </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col col-12>
+      <ion-row>
+        <ion-col col-4>
+            <span>Aadhar Number</span>
+        </ion-col>
+        <ion-col >
+          <ion-item>
+            <ion-input type="" ></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+          </ion-col>
+    </ion-row>
+   
+   
+
+
+
+
+    </ion-content>
